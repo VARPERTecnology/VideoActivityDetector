@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\edixon vargas\programing\visual studio 2015\projects\detecciondeactividad\detecciondeactividad\VideoAnalyser.h(3): fatal error C1083: Cannot open include file: 'opencv\cv.h': No such file or directory
+  VideoAnalyser.cpp
+c:\users\edixon vargas\programing\visual studio 2015\projects\detecciondeactividad\detecciondeactividad\VideoAnalyser.h(3): fatal error C1083: Cannot open include file: 'opencv\cv.h': No such file or directory
+  Generating Code...

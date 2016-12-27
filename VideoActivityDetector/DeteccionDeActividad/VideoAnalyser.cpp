@@ -35,10 +35,18 @@ System::Void DeteccionDeActividad::VideoAnalyser::btnLoadVideo_Click(System::Obj
 
 	if (fileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 	{
+		System::String ^strFileName = fileDialog->FileName;
 		marshal_context ^context = gcnew marshal_context();
-		const char *fName = context->marshal_as<const char*>(fileDialog->FileName);
+		const char *fName = context->marshal_as<const char*>(strFileName);
 
-		CvCapture *capture = cvCaptureFromFile(fName);
-
+		cv::VideoCapture *capture = new cv::VideoCapture();
+		cv::String cvStrFileName = cv::String(fName);
+		if (capture->open(cvStrFileName))
+		{
+			Debug::WriteLine(L"Video opened: " + strFileName);
+		} else
+		{
+			Debug::WriteLine(L"Video can't be opened: " + strFileName);
+		}
 	}
 }

@@ -5,9 +5,13 @@
 
 #include <opencv\cv.h>
 #include <opencv\highgui.h>
+#include <opencv2\opencv.hpp>
 
-using namespace cv;
+#using <system.dll>
+
+//using namespace cv;
 using namespace msclr::interop;
+using namespace System::Diagnostics;
 
 namespace DeteccionDeActividad
 {
